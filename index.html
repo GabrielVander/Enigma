@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>ENIGMA MACHINE</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+    <body>
+        <nav class="nav_tabs">
+            <ul>
+                <li>
+                    <input type="radio" name="tabs" class="rd_tab" id="tab1" checked disabled>
+                    <label for="tab1" class="tab_label">START</label>
+                    <div class="tab-content" style="background-image: url(imgs/background2.png); height: 475px;">
+                        <article>
+                            <h1 style="text-align: center;">ENIGMA MACHINE</h1>
+                            <button id="bttStart">Click to Start</button>
+                        </article>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="tabs" class="rd_tab" id="tab2" disabled>
+                    <label for="tab2" class="tab_label">SETTINGS</label>
+                    <div class="tab-content" style="background-image: url(imgs/background2.png); height: 475px;">
+                        <article>
+                            <div class="div-default background-blue">
+                                <h3>Rotors</h3>
+                                <div class="div-default div-rotor" id="rotor1">
+                                    <div class="div-config">
+                                        <input type="radio" class="rUm" name="rotor1" id="rotor1config1">
+                                        <label for="rotor1config1">Setting 1</label>
+                                    </div>
+                                    <div class="div-config">
+                                        <input type="radio" class="rUm" name="rotor1" id="rotor1config2">
+                                        <label for="rotor1config2">Setting 2</label>
+                                    </div>
+                                    <div class="div-config">
+                                        <input type="radio" class="rUm" name="rotor1" id="rotor1config3">
+                                        <label for="rotor1config3">Setting 3</label>
+                                    </div>
+                                    <div class="div-config">
+                                        <input type="radio" class="rUm" name="rotor1" id="rotor1config4">
+                                        <label for="rotor1config4">Setting 4</label>
+                                    </div>
+                                    <div class="div-config">
+                                        <input type="radio" class="rUm" name="rotor1" id="rotor1config5">
+                                        <label for="rotor1config5">Setting 5</label>
+                                    </div>
+                                    <div class="div-config">
+                                        <button class="button-default border-right rotor-position-config" id="bttMoreRotor1">+</button>
+                                        <input type="text" class="field-default rotor-position-config" value="0" disabled id="initial1">
+                                        <button class="button-default border-left rotor-position-config" id="bttLessRotor1">-</button>
+                                    </div>
+                                </div>
+                                <div class="div-default div-rotor" id="rotor2">
+                                    <div class="div-config">
+                                        <input type="radio" class="rDois" name="rotor2" id="rotor2config1">
+                                        <label for="rotor2config1">Setting 1</label>
+                                    </div>
+                                    <div class="div-config">
+                                        <input type="radio" class="rDois" name="rotor2" id="rotor2config2">
+                                        <label for="rotor2config2">Setting 2</label>
+                                    </div>
+                                    <div class="div-config">
+                                        <input type="radio" class="rDois" name="rotor2" id="rotor2config3">
+                                        <label for="rotor2config3">Setting 3</label>
+                                    </div>
+                                    <div class="div-config">
+                                        <input type="radio" class="rDois" name="rotor2" id="rotor2config4">
+                                        <label for="rotor2config4">Setting 4</label>
+                                    </div>
+                                    <div class="div-config">
+                                        <input type="radio" class="rDois" name="rotor2" id="rotor2config5">
+                                        <label for="rotor2config5">Setting 5</label>
+                                    </div>
+                                    <div class="div-config">
+                                        <button class="button-default border-right rotor-position-config" id="bttMoreRotor2">+</button>
+                                        <input type="text" class="field-default rotor-position-config" value="0" disabled id="initial2">
+                                        <button class="button-default border-left rotor-position-config" id="bttLessRotor2">-</button>
+                                    </div>
+                                </div>
+                                <div class="div-default div-rotor" id="rotor3">
+                                    <div class="div-config">
+                                        <input type="radio" class="rTres" name="rotor3" id="rotor3config1">
+                                        <label for="rotor3config1">Setting 1</label>
+                                    </div>
+                                    <div class="div-config">
+                                        <input type="radio" class="rTres" name="rotor3" id="rotor3config2">
+                                        <label for="rotor3config2">Setting 2</label>
+                                    </div>
+                                    <div class="div-config">
+                                        <input type="radio" class="rTres" name="rotor3" id="rotor3config3">
+                                        <label for="rotor3config3">Setting 3</label>
+                                    </div>
+                                    <div class="div-config">
+                                        <input type="radio" class="rTres" name="rotor3" id="rotor3config4">
+                                        <label for="rotor3config4">Setting 4</label>
+                                    </div>
+                                    <div class="div-config">
+                                        <input type="radio" class="rTres" name="rotor3" id="rotor3config5">
+                                        <label for="rotor3config5">Setting 5</label>
+                                    </div>
+                                    <div class="div-config">
+                                        <button class="button-default border-right rotor-position-config" id="bttMoreRotor3">+</button>
+                                        <input type="text" class="field-default rotor-position-config" value="0" disabled id="initial3">
+                                        <button class="button-default border-left rotor-position-config" id="bttLessRotor3">-</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="div-default background-blue">
+                                <div style="display: block;">
+                                    <h3 style="float: left;">PLUGS</h3>
+                                    <div style="margin: 10px; float: left; height: 25px;">
+                                        <img id="bttLessPlug" src="imgs/subtract-sign.png" style="width: 20px; height: 20px; vertical-align: middle;">
+                                        <img id="bttMorePlug" src="imgs/add-icon.png" style="width: 20px; height: 20px; vertical-align: middle;">
+                                    </div>
+                                </div>
+                                <div style="display: block; overflow: auto; width: 100%; max-height: 57px;" id="divPlugs"></div>
+                            </div>
+                            <div class="div-default div-buttons">
+                                <button class="button-default button-nav" id="bttBack">Back</button>
+                                <button class="button-default button-nav" id="bttCrypt">Crypt</button>
+                                <button class="button-default button-nav" id="bttDecrypt">Decrypt</button>           
+                            </div>
+                        </article>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="tabs" class="rd_tab" id="tab3" disabled>
+                    <label for="tab3" class="tab_label">CRYPT</label>
+                    <div class="tab-content" style="background-image: url(imgs/background2.png); height: 475px;">
+                        <article>
+                            <div class="div-default div-keyboard" id="crypt">
+                                <div>
+                                    <button class="btt-key-keyboard">1</button>
+                                    <button class="btt-key-keyboard">2</button>
+                                    <button class="btt-key-keyboard">3</button>
+                                    <button class="btt-key-keyboard">4</button>
+                                    <button class="btt-key-keyboard">5</button>
+                                    <button class="btt-key-keyboard">6</button>
+                                    <button class="btt-key-keyboard">7</button>
+                                    <button class="btt-key-keyboard">8</button>
+                                    <button class="btt-key-keyboard">9</button>
+                                    <button class="btt-key-keyboard">0</button>                                    
+                                </div>
+                                <div>
+                                    <button class="btt-key-keyboard">Q</button>
+                                    <button class="btt-key-keyboard">W</button>
+                                    <button class="btt-key-keyboard">E</button>
+                                    <button class="btt-key-keyboard">R</button>
+                                    <button class="btt-key-keyboard">T</button>
+                                    <button class="btt-key-keyboard">Y</button>
+                                    <button class="btt-key-keyboard">U</button>
+                                    <button class="btt-key-keyboard">I</button>
+                                    <button class="btt-key-keyboard">O</button>
+                                    <button class="btt-key-keyboard">P</button>
+                                </div>
+                                <div>
+                                    <button class="btt-key-keyboard">A</button>
+                                    <button class="btt-key-keyboard">S</button>
+                                    <button class="btt-key-keyboard">D</button>
+                                    <button class="btt-key-keyboard">F</button>
+                                    <button class="btt-key-keyboard">G</button>
+                                    <button class="btt-key-keyboard">H</button>
+                                    <button class="btt-key-keyboard">J</button>
+                                    <button class="btt-key-keyboard">K</button>
+                                    <button class="btt-key-keyboard">L</button>
+                                </div>
+                                <div>
+                                    <button class="btt-key-keyboard">Z</button>
+                                    <button class="btt-key-keyboard">X</button>
+                                    <button class="btt-key-keyboard">C</button>
+                                    <button class="btt-key-keyboard">V</button>
+                                    <button class="btt-key-keyboard">B</button>
+                                    <button class="btt-key-keyboard">N</button>
+                                    <button class="btt-key-keyboard">M</button>
+                                    <button class="btt-key-keyboard" id="erase" value="erase"><-</button>
+                                </div>
+                                <div>
+                                    <button class="btt-key-keyboard">,</button>
+                                    <button class="btt-key-keyboard">.</button>
+                                    <button class="btt-key-keyboard">?</button>
+                                    <button class="btt-key-keyboard">!</button>
+                                    <button class="btt-key-keyboard">:</button>
+                                    <button class="btt-key-keyboard">;</button>
+                                    <button class="btt-key-keyboard" value="enter" id="enter"><img src="imgs/enter-arrow.png" style="width: 15px; height: 15px;"/></button>
+                                </div>
+                                <div>
+                                    <button class="btt-space-keyboard" value=" " id="space">ESPAÇO</button>
+                                </div>
+                            </div>
+                            <div class="div-default div-keyboard" style="margin-top: 10px;">
+                                <p class="border-top titleMessage">Message</p>
+                                <textarea type="text" class="border-bottom field-default outputtext" id="cryptIn"></textarea>
+                                <p class="border-top titleMessage">Crypted Message</p>
+                                <textarea type="text" class="border-bottom field-default outputtext" id="cryptOut" disabled></textarea>
+                            </div>
+                        </article>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="tabs" class="rd_tab" id="tab4" disabled>
+                    <label for="tab4" class="tab_label">DECRYPT</label>
+                    <div class="tab-content" style="background-image: url(imgs/background2.png); height: 475px;">
+                        <article>
+                            <div class="div-default div-keyboard" id="decrypt">
+                                <div>
+                                    <button class="btt-key-keyboard">1</button>
+                                    <button class="btt-key-keyboard">2</button>
+                                    <button class="btt-key-keyboard">3</button>
+                                    <button class="btt-key-keyboard">4</button>
+                                    <button class="btt-key-keyboard">5</button>
+                                    <button class="btt-key-keyboard">6</button>
+                                    <button class="btt-key-keyboard">7</button>
+                                    <button class="btt-key-keyboard">8</button>
+                                    <button class="btt-key-keyboard">9</button>
+                                    <button class="btt-key-keyboard">0</button>
+                                </div>
+                                <div>
+                                    <button class="btt-key-keyboard">Q</button>
+                                    <button class="btt-key-keyboard">W</button>
+                                    <button class="btt-key-keyboard">E</button>
+                                    <button class="btt-key-keyboard">R</button>
+                                    <button class="btt-key-keyboard">T</button>
+                                    <button class="btt-key-keyboard">Y</button>
+                                    <button class="btt-key-keyboard">U</button>
+                                    <button class="btt-key-keyboard">I</button>
+                                    <button class="btt-key-keyboard">O</button>
+                                    <button class="btt-key-keyboard">P</button>
+                                </div>
+                                <div>
+                                    <button class="btt-key-keyboard">A</button>
+                                    <button class="btt-key-keyboard">S</button>
+                                    <button class="btt-key-keyboard">D</button>
+                                    <button class="btt-key-keyboard">F</button>
+                                    <button class="btt-key-keyboard">G</button>
+                                    <button class="btt-key-keyboard">H</button>
+                                    <button class="btt-key-keyboard">J</button>
+                                    <button class="btt-key-keyboard">K</button>
+                                    <button class="btt-key-keyboard">L</button>
+                                </div>
+                                <div>
+                                    <button class="btt-key-keyboard">Z</button>
+                                    <button class="btt-key-keyboard">X</button>
+                                    <button class="btt-key-keyboard">C</button>
+                                    <button class="btt-key-keyboard">V</button>
+                                    <button class="btt-key-keyboard">B</button>
+                                    <button class="btt-key-keyboard">N</button>
+                                    <button class="btt-key-keyboard">M</button>
+                                    <button class="btt-key-keyboard" id="erase2" value="erase"><-</button>
+                                </div>
+                                <div>
+                                    <button class="btt-key-keyboard">,</button>
+                                    <button class="btt-key-keyboard">.</button>
+                                    <button class="btt-key-keyboard">?</button>
+                                    <button class="btt-key-keyboard">!</button>
+                                    <button class="btt-key-keyboard">:</button>
+                                    <button class="btt-key-keyboard">;</button>
+                                    <button class="btt-key-keyboard" value="enter" id="enter2"><img src="imgs/enter-arrow.png" style="width: 15px; height: 15px;"/></button>
+                                </div>
+                                <div>
+                                    <button class="btt-space-keyboard" value=" " id="space2">SPACE</button>
+                                </div>
+                            </div>
+                            <div class="div-default div-keyboard" style="margin-top: 10px;">
+                                <p class="border-top titleMessage">Crypted Message</p>
+                                <textarea type="text" class="border-bottom field-default outputtext" id="decryptIn"></textarea>
+                                <p class="border-top titleMessage">Message</p>
+                                <textarea type="text" class="border-bottom field-default outputtext" id="decryptOut" disabled></textarea>
+                            </div>
+                        </article>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/enigma.js"></script>
+    </body>
+</html>
